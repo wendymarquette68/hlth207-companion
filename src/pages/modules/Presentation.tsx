@@ -4,6 +4,7 @@ import { NoteField } from '../../components/NoteField'
 import { SaveIndicator } from '../../components/SaveIndicator'
 import { NextStepBox } from '../../components/NextStepBox'
 import { generatePDF } from '../../utils/pdf'
+import { save } from '../../utils/storage'
 
 const FIELDS = [
   { key: 'issue_overview', label: 'Issue Overview', placeholder: 'Summarize the health issue for an audience unfamiliar with it.' },
@@ -20,6 +21,7 @@ export function Presentation() {
   const handleExport = () => {
     const sections = FIELDS.map(f => ({ heading: f.label, content: notes[f.key] ?? '' }))
     generatePDF('presentation', session?.studentName ?? '', session?.section ?? '', sections)
+    save('presentation_exported', true)
   }
 
   return (

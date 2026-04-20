@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useSession } from '../context/SessionContext'
 import { load, save } from '../utils/storage'
 import { generatePDF } from '../utils/pdf'
@@ -11,7 +12,9 @@ function getCurrentWeek(): number {
 
 export function ReflectionPage() {
   const { session } = useSession()
-  const isUnlocked = getCurrentWeek() >= config.reflectionUnlockWeek
+  const isWeekUnlocked = getCurrentWeek() >= config.reflectionUnlockWeek
+  const isPresentationDone = load<boolean>('presentation_exported') === true
+  const isUnlocked = isWeekUnlocked && isPresentationDone
   const storageKey = 'reflection'
 
   const [responses, setResponses] = useState<string[]>(() => {
@@ -45,12 +48,15 @@ export function ReflectionPage() {
     generatePDF('reflection', session?.studentName ?? '', session?.section ?? '', sections)
   }
 
-  if (!isUnlocked) {
+  // Week not yet unlocked
+  if (!isWeekUnlocked) {
     return (
       <div>
         <h1 className="text-xl font-bold text-slate-800 mb-2">App Reflection</h1>
-        <div className="bg-slate-100 border border-slate-200 rounded-xl p-6 text-center">
-          <p className="text-slate-500 text-sm mb-1">🔒 This module unlocks in Week {config.reflectionUnlockWeek}.</p>
+        <div className="bg-slate-100 border border-slate-200 rounded-xl p-6">
+          <p className="text-slate-600 text-sm font-medium mb-1">
+            🔒 This module unlocks in Week {config.reflectionUnlockWeek}.
+          </p>
           <p className="text-slate-400 text-xs">
             Complete your weekly activities and planning notes until then.
           </p>
@@ -59,12 +65,45 @@ export function ReflectionPage() {
     )
   }
 
+  // Week unlocked but presentation not yet exported
+  if (!isPresentationDone) {
+    return (
+      <div>
+        <h1 className="text-xl font-bold text-slate-800 mb-2">App Reflection</h1>
+        <div className="bg-amber-50 border border-amber-300 rounded-xl p-6">
+          <p className="text-amber-800 text-sm font-semibold mb-2">
+            Complete your Presentation Planning Notes first.
+          </p>
+          <p className="text-amber-700 text-sm mb-4 leading-relaxed">
+            Before writing your App Reflection, you need to finish and export your Presentation
+            Planning Notes PDF. This ensures you have organized your full Health Advocacy Project
+            before reflecting on the experience.
+          </p>
+          <p className="text-amber-700 text-sm mb-5 leading-relaxed">
+            Go to <strong>Presentation Planning Notes</strong>, complete all fields, and click
+            <strong> Export PDF</strong>. The Reflection will unlock automatically once that is done.
+          </p>
+          <Link
+            to="/notes/presentation"
+            className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold px-5 py-2 rounded-lg text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+          >
+            Go to Presentation Planning Notes →
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
+  // Fully unlocked
   return (
     <div>
       <h1 className="text-xl font-bold text-slate-800 mb-1">App Reflection</h1>
-      <p className="text-sm text-slate-500 mb-6">
-        Reflect on your experience using the HLTH 207 Companion App this semester. Export your
-        completed reflection as a PDF and submit it in Blackboard.
+      <p className="text-sm text-slate-500 mb-2">
+        Reflect on your experience using the HLTH 207 Companion App this semester.
+      </p>
+      <p className="text-xs text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2 mb-6">
+        Answer all five prompts below. When you are done, export your Reflection PDF and submit
+        it in Blackboard Ultra as your final course deliverable.
       </p>
 
       {config.reflectionPrompts.map((prompt, i) => (
@@ -95,7 +134,7 @@ export function ReflectionPage() {
         <SaveIndicator savedAt={savedAt} />
       </div>
       <p className="text-xs text-slate-400 mt-3">
-        After exporting, submit the PDF in Blackboard Ultra.
+        After exporting, submit the PDF in Blackboard Ultra. This is your final submission.
       </p>
     </div>
   )
