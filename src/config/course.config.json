@@ -1,0 +1,161 @@
+{
+  "courseTitle": "HLTH 207",
+  "semester": "Summer 2026",
+  "reflectionUnlockWeek": 8,
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "title": "Introduction to Health Systems",
+      "chapters": "Chapter 1–2",
+      "activity": {
+        "type": "scenario",
+        "title": "Mapping the Health System",
+        "prompt": "The U.S. health system is often described as fragmented — multiple payers, providers, and levels of government all play a role.\n\nConsider a patient recently diagnosed with Type 2 diabetes who is uninsured and lives in a rural area.",
+        "questions": [
+          "What parts of the health system would this patient need to navigate to receive care?",
+          "What barriers might prevent them from accessing needed services?",
+          "Who are the key stakeholders (providers, payers, policymakers) involved in this patient's care?",
+          "How does the structure of the U.S. health system create these barriers?"
+        ]
+      }
+    },
+    {
+      "weekNumber": 2,
+      "title": "Social Determinants of Health",
+      "chapters": "Chapter 3–4",
+      "activity": {
+        "type": "concept",
+        "title": "Applying the Social Determinants Framework",
+        "prompt": "Social determinants of health (SDOH) include the conditions in which people are born, grow, live, work, and age.\n\nConsider a low-income neighborhood with limited grocery stores, high unemployment, and poor public transportation.",
+        "questions": [
+          "Which social determinants of health are most prominent in this scenario?",
+          "How might these determinants affect residents' health outcomes?",
+          "What upstream policy interventions could address these determinants?",
+          "Which government level (local, state, federal) would be best positioned to act?"
+        ]
+      }
+    },
+    {
+      "weekNumber": 3,
+      "title": "Health Policy Basics",
+      "chapters": "Chapter 5–6",
+      "activity": {
+        "type": "policy",
+        "title": "Policy Analysis Exercise",
+        "prompt": "A state legislature is considering a bill that would expand Medicaid eligibility to cover adults up to 150% of the federal poverty level.",
+        "questions": [
+          "Who would benefit from this policy change? Be specific about the population.",
+          "What arguments would supporters make in favor of this expansion?",
+          "What arguments would opponents make against this expansion?",
+          "What data or evidence would be most persuasive to policymakers on each side?"
+        ]
+      }
+    },
+    {
+      "weekNumber": 4,
+      "title": "Healthcare Workforce",
+      "chapters": "Chapter 7–8",
+      "activity": {
+        "type": "scenario",
+        "title": "Addressing Workforce Shortages",
+        "prompt": "A rural county is experiencing a shortage of behavioral health providers. Wait times for mental health appointments exceed 6 months. The nearest psychiatric hospital is 90 miles away.",
+        "questions": [
+          "What healthcare professionals could address this shortage?",
+          "What barriers affect access to behavioral health services in rural areas?",
+          "How might workforce shortages affect population health in this county?",
+          "What policy solutions have been used in other states to address rural provider shortages?"
+        ]
+      }
+    },
+    {
+      "weekNumber": 5,
+      "title": "Health Disparities & Equity",
+      "chapters": "Chapter 9–10",
+      "activity": {
+        "type": "reflective",
+        "title": "Examining Health Disparities",
+        "prompt": "Black Americans experience significantly higher rates of hypertension, maternal mortality, and diabetes compared to white Americans. These disparities persist even when controlling for income and education.",
+        "questions": [
+          "What factors beyond income might explain persistent racial health disparities?",
+          "How does structural racism contribute to health outcomes?",
+          "What role can health policy play in reducing disparities?",
+          "What would a health equity-centered policy approach look like for one of these conditions?"
+        ]
+      }
+    },
+    {
+      "weekNumber": 6,
+      "title": "Health Advocacy in Practice",
+      "chapters": "Chapter 11–12",
+      "activity": {
+        "type": "system_mapping",
+        "title": "Mapping Your Advocacy Strategy",
+        "prompt": "Think about the health policy issue you have selected for your Health Advocacy Project.",
+        "questions": [
+          "Who are the key decision-makers with the power to change this policy?",
+          "Who are the stakeholders who would be affected by a policy change (supporters and opponents)?",
+          "What advocacy tactics would be most effective for reaching your target decision-maker?",
+          "What evidence or data is most persuasive for the audience you are targeting?"
+        ]
+      }
+    },
+    {
+      "weekNumber": 7,
+      "title": "Building Your Policy Argument",
+      "chapters": "Chapter 13",
+      "activity": {
+        "type": "concept",
+        "title": "Strengthening Your Policy Recommendation",
+        "prompt": "A strong policy argument includes a clear problem statement, evidence of impact, a specific policy recommendation, identification of who should act, and a projected outcome.",
+        "questions": [
+          "State your policy recommendation in one clear sentence.",
+          "What is the strongest piece of evidence supporting your recommendation?",
+          "Who is the specific decision-maker or body that should take action?",
+          "What is the most likely counterargument, and how would you respond to it?"
+        ]
+      }
+    },
+    {
+      "weekNumber": 8,
+      "title": "Presentations & Reflection",
+      "chapters": "Course Review",
+      "activity": {
+        "type": "reflective",
+        "title": "Preparing Your Advocacy Presentation",
+        "prompt": "You are preparing to present your Health Advocacy Project. A strong advocacy presentation opens with the problem, presents evidence, delivers a clear recommendation, and closes with a call to action.",
+        "questions": [
+          "What is the one-sentence problem statement that will open your presentation?",
+          "Which piece of evidence will you lead with and why?",
+          "What is your specific, actionable call to action?",
+          "What question do you anticipate from the audience, and how will you answer it?"
+        ]
+      }
+    }
+  ],
+  "reflectionPrompts": [
+    "How did the weekly activities help you apply the course readings to real-world health policy issues?",
+    "Did the planning note modules help you organize your thinking before writing your assignments? Which module was most useful?",
+    "Which stage of the Health Advocacy Project was easiest to develop using the app? Which was most difficult?",
+    "What parts of the app were confusing or not useful to you?",
+    "How could the app be improved for future HLTH 207 students?"
+  ],
+  "blockedKeywords": [
+    "write my",
+    "write a",
+    "write the",
+    "generate my",
+    "generate a",
+    "draft my",
+    "draft a",
+    "complete my",
+    "do my assignment",
+    "discussion post",
+    "article review",
+    "policy letter",
+    "advocacy letter",
+    "presentation script",
+    "write for me",
+    "do this for me",
+    "finish my"
+  ]
+}
