@@ -24,6 +24,15 @@
           "How does the structure of the U.S. health system create these barriers?"
         ]
       },
+      "projectConnection": {
+        "intro": "Think about the health issue you are considering for your Health Advocacy Project. This week's content on health systems gives you a foundation for understanding how that issue fits into the bigger picture.",
+        "prompts": [
+          "What health issue are you thinking about exploring? Describe it in 1–2 sentences.",
+          "Which part of the health system is most involved in your issue — providers, payers, public health, or policy?",
+          "Who is the population most affected by this issue?",
+          "What barriers in the health system make this issue difficult to address?"
+        ]
+      },
       "nextStep": {
         "message": "Now go to Health Issue Exploration in the Planning Notes. Use what you just thought about to start identifying the health policy issue you want to explore for your Health Advocacy Project.",
         "label": "Go to Health Issue Exploration",
@@ -49,6 +58,15 @@
           "How might these determinants affect residents' health outcomes?",
           "What upstream policy interventions could address these determinants?",
           "Which government level (local, state, federal) would be best positioned to act?"
+        ]
+      },
+      "projectConnection": {
+        "intro": "Social determinants often sit at the root of the health issue you are exploring. This week, think about the social conditions that contribute to your issue.",
+        "prompts": [
+          "Which social determinants of health contribute to the issue you are exploring (e.g., income, housing, education, neighborhood)?",
+          "How do those social conditions affect the population you identified?",
+          "Does your issue affect certain communities more than others? Why?",
+          "Would a policy solution need to address social determinants, or just health care access?"
         ]
       },
       "nextStep": {
@@ -78,6 +96,15 @@
           "What data or evidence would be most persuasive to policymakers on each side?"
         ]
       },
+      "projectConnection": {
+        "intro": "Now that you understand how health policy works, start thinking about what kind of policy change could address your health issue.",
+        "prompts": [
+          "What type of policy change would address your health issue — regulatory, financing, or allocative?",
+          "At what level of government would this policy change happen — local, state, or federal?",
+          "Who would support this policy change and why?",
+          "What is the strongest argument against the change, and how would you respond to it?"
+        ]
+      },
       "nextStep": {
         "message": "Go to Article Research Notes in the Planning Notes. Begin organizing your notes from your first scholarly article on your health policy issue.",
         "label": "Go to Article Research Notes",
@@ -103,6 +130,15 @@
           "What barriers affect access to behavioral health services in rural areas?",
           "How might workforce shortages affect population health in this county?",
           "What policy solutions have been used in other states to address rural provider shortages?"
+        ]
+      },
+      "projectConnection": {
+        "intro": "Workforce issues may be part of what drives your health issue or complicates the solution. Consider whether the availability of providers is a factor in your project.",
+        "prompts": [
+          "Does your health issue involve a shortage or maldistribution of healthcare providers? If so, how?",
+          "Which types of healthcare workers are most involved in addressing your issue?",
+          "Are there workforce-related barriers that prevent the population you identified from getting care?",
+          "Could a workforce policy (training programs, loan forgiveness, scope-of-practice expansion) be part of your recommendation?"
         ]
       },
       "nextStep": {
@@ -132,6 +168,15 @@
           "What would a health equity-centered policy approach look like for one of these conditions?"
         ]
       },
+      "projectConnection": {
+        "intro": "Health disparities are often at the heart of why a health issue matters. This week, examine whether your issue disproportionately affects certain groups and what that means for your policy argument.",
+        "prompts": [
+          "Does your health issue disproportionately affect a particular racial, ethnic, or socioeconomic group? What does the data show?",
+          "Are there structural or historical factors that explain why this group is more affected?",
+          "How does framing your issue as a health equity issue strengthen your policy argument?",
+          "What would a health equity-centered solution look like for your specific issue?"
+        ]
+      },
       "nextStep": {
         "message": "Go to Article Research Notes and complete your notes for all three scholarly articles. When you are done, export your Article Research Notes PDF — you can use it as a reference while writing your Article Review assignment in Blackboard.",
         "label": "Go to Article Research Notes",
@@ -157,6 +202,15 @@
           "Who are the stakeholders who would be affected by a policy change (supporters and opponents)?",
           "What advocacy tactics would be most effective for reaching your target decision-maker?",
           "What evidence or data is most persuasive for the audience you are targeting?"
+        ]
+      },
+      "projectConnection": {
+        "intro": "This week connects directly to your project. Use this space to apply advocacy concepts to your specific issue and sharpen your strategy.",
+        "prompts": [
+          "Who is the single most important decision-maker you need to persuade? (A legislator, agency head, school board, etc.)",
+          "What do you know about that decision-maker's priorities or concerns?",
+          "Which advocacy tactic would be most effective for your issue — a policy brief, public testimony, coalition letter, or media campaign?",
+          "What is the one message you want your decision-maker to walk away with?"
         ]
       },
       "nextStep": {
@@ -186,6 +240,15 @@
           "What is the most likely counterargument, and how would you respond to it?"
         ]
       },
+      "projectConnection": {
+        "intro": "This is the week to sharpen and finalize your policy argument. Use these prompts to stress-test your recommendation before writing your Policy Letter.",
+        "prompts": [
+          "Write your policy recommendation in one clear, specific sentence.",
+          "Which piece of evidence from your research is most persuasive? Why?",
+          "What outcome would you expect if the policy is implemented? Be specific.",
+          "What is the strongest counterargument, and what is your response?"
+        ]
+      },
       "nextStep": {
         "message": "Go to Policy Advocacy Notes and finalize your argument. When ready, export your Policy Advocacy Notes PDF to use as a reference while writing your Policy Letter in Blackboard.",
         "label": "Go to Policy Advocacy Notes",
@@ -211,6 +274,15 @@
           "Which piece of evidence will you lead with and why?",
           "What is your specific, actionable call to action?",
           "What question do you anticipate from the audience, and how will you answer it?"
+        ]
+      },
+      "projectConnection": {
+        "intro": "You have arrived at the final week. Use these prompts to pull your entire project together and prepare for your presentation.",
+        "prompts": [
+          "How has your understanding of your health issue changed from Week 1 to now?",
+          "What is the most important thing you want your audience to know about your issue?",
+          "What is your call to action — what do you want people to do after hearing your presentation?",
+          "Looking back at all eight weeks, which week's content was most useful for your project and why?"
         ]
       },
       "nextStep": {

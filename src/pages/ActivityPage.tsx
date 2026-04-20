@@ -53,6 +53,8 @@ export function ActivityPage() {
       week.title,
       week.chapters,
       week.objectives ?? [],
+      week.projectConnection?.intro ?? '',
+      week.projectConnection?.prompts ?? [],
       projectNote,
       session?.studentName ?? '',
       session?.section ?? ''
@@ -145,15 +147,30 @@ export function ActivityPage() {
             <h2 className="text-sm font-semibold text-green-900 mb-1">
               Health Advocacy Project Connection
             </h2>
-            <p className="text-xs text-green-700 mb-3 leading-relaxed">
-              Is there anything in this week's content that connects to your Health Advocacy Project? If so, what? Think about the issue you are exploring, the population affected, or the policy change you are considering.
-            </p>
+
+            {week.projectConnection && (
+              <div className="mb-4">
+                <p className="text-xs text-green-800 leading-relaxed mb-3">
+                  {week.projectConnection.intro}
+                </p>
+                <p className="text-xs font-semibold text-green-800 mb-1">Consider the following:</p>
+                <ol className="space-y-1 mb-3">
+                  {week.projectConnection.prompts.map((prompt, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-green-900">
+                      <span className="font-bold shrink-0">{i + 1}.</span>
+                      {prompt}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+
             <textarea
               id={`project-connection-${num}`}
-              rows={5}
+              rows={6}
               value={projectNote}
               onChange={e => setProjectNote(e.target.value)}
-              placeholder="Describe any connections between this week's content and your project..."
+              placeholder="Record your thoughts here. Address as many of the questions above as apply to your project..."
               className="w-full rounded-lg border border-green-300 bg-white px-3 py-2 text-sm text-slate-800 focus:border-green-500 focus:ring-2 focus:ring-green-100 focus:outline-none resize-y"
             />
             <div className="flex items-center justify-between mt-3">

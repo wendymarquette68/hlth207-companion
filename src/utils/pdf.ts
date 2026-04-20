@@ -124,7 +124,9 @@ export function generateWeeklyNotesPDF(
   weekTitle: string,
   chapters: string,
   objectives: string[],
-  projectConnection: string,
+  projectConnectionIntro: string,
+  projectConnectionPrompts: string[],
+  projectConnectionNote: string,
   studentName: string,
   section: string
 ): void {
@@ -141,12 +143,25 @@ export function generateWeeklyNotesPDF(
   }
   addDivider()
 
-  // Project connection
+  // Project connection guiding prompts
   addText('Health Advocacy Project Connection', 12, true)
-  if (projectConnection.trim()) {
-    addText(projectConnection, 11)
+  if (projectConnectionIntro) {
+    addText(projectConnectionIntro, 11, false, [80, 80, 80])
+  }
+  if (projectConnectionPrompts.length > 0) {
+    addText('Guiding questions:', 11, true)
+    projectConnectionPrompts.forEach((p, i) => {
+      addText(`  ${i + 1}. ${p}`, 11)
+    })
+  }
+  addDivider()
+
+  // Student's notes
+  addText('My Project Connection Notes', 12, true)
+  if (projectConnectionNote.trim()) {
+    addText(projectConnectionNote, 11)
   } else {
-    addText('(No connection noted for this week.)', 11, false, [150, 150, 150])
+    addText('(No notes recorded for this week.)', 11, false, [150, 150, 150])
   }
   addDivider()
 
