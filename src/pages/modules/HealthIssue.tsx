@@ -2,6 +2,7 @@ import { useSession } from '../../context/SessionContext'
 import { useNotes } from '../../hooks/useNotes'
 import { NoteField } from '../../components/NoteField'
 import { SaveIndicator } from '../../components/SaveIndicator'
+import { NextStepBox } from '../../components/NextStepBox'
 import { generatePDF } from '../../utils/pdf'
 
 const FIELDS = [
@@ -23,9 +24,13 @@ export function HealthIssue() {
   return (
     <div>
       <h1 className="text-xl font-bold text-slate-800 mb-1">Health Issue Exploration</h1>
-      <p className="text-sm text-slate-500 mb-6">
+      <p className="text-sm text-slate-500 mb-2">
         Identify and describe the health policy issue for your project. These notes will help you
         write your assignment — they are not the assignment itself.
+      </p>
+      <p className="text-xs text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2 mb-6">
+        Complete all four fields below. When you are done, export your notes as a PDF and use it
+        as a reference while writing your Health Issue assignment in Blackboard.
       </p>
 
       {FIELDS.map(f => (
@@ -48,6 +53,15 @@ export function HealthIssue() {
         </button>
         <SaveIndicator savedAt={savedAt} />
       </div>
+
+      <NextStepBox
+        message="Once you have exported your Health Issue Exploration PDF, go to Article Research Notes. You will organize notes from three scholarly articles that support your health issue and policy argument. Have your articles ready before you begin."
+        label="Go to Article Research Notes"
+        path="/notes/article-review"
+        secondaryMessage="You can also return to the Dashboard to continue this week's activity or check your overall progress."
+        secondaryLabel="Back to Dashboard"
+        secondaryPath="/dashboard"
+      />
     </div>
   )
 }

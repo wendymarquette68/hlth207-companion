@@ -2,6 +2,7 @@ import { useSession } from '../../context/SessionContext'
 import { useNotes } from '../../hooks/useNotes'
 import { NoteField } from '../../components/NoteField'
 import { SaveIndicator } from '../../components/SaveIndicator'
+import { NextStepBox } from '../../components/NextStepBox'
 import { generatePDF } from '../../utils/pdf'
 
 const FIELDS = [
@@ -24,9 +25,14 @@ export function Presentation() {
   return (
     <div>
       <h1 className="text-xl font-bold text-slate-800 mb-1">Presentation Planning Notes</h1>
-      <p className="text-sm text-slate-500 mb-6">
+      <p className="text-sm text-slate-500 mb-2">
         Organize your advocacy presentation structure. These notes help you plan — your actual
-        slides and script are created independently.
+        slides and script are created independently in your presentation tool.
+      </p>
+      <p className="text-xs text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2 mb-6">
+        Use your Policy Advocacy Notes PDF as a reference while completing these fields. When you
+        are done, export your Presentation Planning PDF. Then complete the App Reflection — it is
+        your final submission for this course.
       </p>
 
       {FIELDS.map(f => (
@@ -49,6 +55,15 @@ export function Presentation() {
         </button>
         <SaveIndicator savedAt={savedAt} />
       </div>
+
+      <NextStepBox
+        message="You have completed all four planning note modules. Your final step in the app is the App Reflection. Open the Reflection module, respond to the five prompts, export your Reflection PDF, and submit it in Blackboard Ultra."
+        label="Go to App Reflection"
+        path="/reflection"
+        secondaryMessage="You can also return to the Dashboard to review your weekly activities or revisit any planning module."
+        secondaryLabel="Back to Dashboard"
+        secondaryPath="/dashboard"
+      />
     </div>
   )
 }

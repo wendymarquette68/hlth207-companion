@@ -2,6 +2,7 @@ import { useSession } from '../../context/SessionContext'
 import { useNotes } from '../../hooks/useNotes'
 import { NoteField } from '../../components/NoteField'
 import { SaveIndicator } from '../../components/SaveIndicator'
+import { NextStepBox } from '../../components/NextStepBox'
 import { generatePDF } from '../../utils/pdf'
 
 const ARTICLE_FIELDS = [
@@ -55,9 +56,14 @@ export function ArticleReview() {
   return (
     <div>
       <h1 className="text-xl font-bold text-slate-800 mb-1">Article Research Notes</h1>
-      <p className="text-sm text-slate-500 mb-6">
-        Organize your notes for three scholarly articles. These notes support your Article Review
-        assignment — they are not the assignment itself.
+      <p className="text-sm text-slate-500 mb-2">
+        Organize your notes for three scholarly articles related to your health policy issue.
+        These notes support your Article Review assignment — they are not the assignment itself.
+      </p>
+      <p className="text-xs text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2 mb-6">
+        Complete all six fields for each of your three articles. You can save your progress and
+        return at any time. When all three articles are recorded, export your PDF and use it as a
+        reference while writing your Article Review in Blackboard.
       </p>
 
       {[0, 1, 2].map(i => (
@@ -73,6 +79,15 @@ export function ArticleReview() {
         </button>
         <SaveIndicator savedAt={savedAt} />
       </div>
+
+      <NextStepBox
+        message="Once you have exported your Article Research Notes PDF, go to Policy Advocacy Notes. You will use the evidence from your three articles to build your policy argument — what change is needed, who should act, and what impact it would have."
+        label="Go to Policy Advocacy Notes"
+        path="/notes/policy-advocacy"
+        secondaryMessage="You can also return to the Dashboard to check this week's activity or review your progress."
+        secondaryLabel="Back to Dashboard"
+        secondaryPath="/dashboard"
+      />
     </div>
   )
 }

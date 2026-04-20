@@ -2,6 +2,7 @@ import { useSession } from '../../context/SessionContext'
 import { useNotes } from '../../hooks/useNotes'
 import { NoteField } from '../../components/NoteField'
 import { SaveIndicator } from '../../components/SaveIndicator'
+import { NextStepBox } from '../../components/NextStepBox'
 import { generatePDF } from '../../utils/pdf'
 
 const FIELDS = [
@@ -23,9 +24,14 @@ export function PolicyAdvocacy() {
   return (
     <div>
       <h1 className="text-xl font-bold text-slate-800 mb-1">Policy Advocacy Notes</h1>
-      <p className="text-sm text-slate-500 mb-6">
-        Organize your policy argument before writing your advocacy letter. These notes are planning
+      <p className="text-sm text-slate-500 mb-2">
+        Organize your policy argument before writing your Policy Letter. These notes are planning
         tools — not the assignment itself.
+      </p>
+      <p className="text-xs text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2 mb-6">
+        Use your Article Research Notes PDF as a reference while completing these fields. When you
+        are done, export your Policy Advocacy Notes PDF and use it while writing your Policy Letter
+        in Blackboard.
       </p>
 
       {FIELDS.map(f => (
@@ -48,6 +54,15 @@ export function PolicyAdvocacy() {
         </button>
         <SaveIndicator savedAt={savedAt} />
       </div>
+
+      <NextStepBox
+        message="Once you have exported your Policy Advocacy Notes PDF, go to Presentation Planning Notes. You will organize how you will present your issue, evidence, and policy recommendation to an audience."
+        label="Go to Presentation Planning Notes"
+        path="/notes/presentation"
+        secondaryMessage="You can also return to the Dashboard to continue this week's activity or review your progress."
+        secondaryLabel="Back to Dashboard"
+        secondaryPath="/dashboard"
+      />
     </div>
   )
 }
