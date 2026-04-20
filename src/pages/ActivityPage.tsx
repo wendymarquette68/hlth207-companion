@@ -70,6 +70,22 @@ export function ActivityPage() {
       <h1 className="text-xl font-bold text-slate-800 mb-1">{week.title}</h1>
       <p className="text-xs text-slate-500 mb-6">{week.chapters}</p>
 
+      {week.objectives && week.objectives.length > 0 && (
+        <div className="bg-white border border-slate-200 rounded-xl p-4 mb-4">
+          <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+            Learning Objectives
+          </h2>
+          <ul className="space-y-1">
+            {week.objectives.map((obj, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                <span className="text-blue-500 mt-0.5 shrink-0">▸</span>
+                {obj}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6">
         <h2 className="text-sm font-semibold text-blue-900 mb-2">
           {week.activity.title}

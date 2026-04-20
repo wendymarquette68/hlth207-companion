@@ -7,6 +7,12 @@
       "weekNumber": 1,
       "title": "Introduction to Health Systems",
       "chapters": "Chapter 1–2",
+      "objectives": [
+        "Identify the major components of the U.S. health system",
+        "Describe how fragmentation affects patient access to care",
+        "Recognize the roles of key stakeholders in health care delivery",
+        "Connect health system structure to real patient experiences"
+      ],
       "activity": {
         "type": "scenario",
         "title": "Mapping the Health System",
@@ -28,6 +34,12 @@
       "weekNumber": 2,
       "title": "Social Determinants of Health",
       "chapters": "Chapter 3–4",
+      "objectives": [
+        "Define the social determinants of health and their categories",
+        "Explain how conditions outside of health care shape health outcomes",
+        "Apply the SDOH framework to a community scenario",
+        "Identify upstream policy levers that address social determinants"
+      ],
       "activity": {
         "type": "concept",
         "title": "Applying the Social Determinants Framework",
@@ -49,6 +61,12 @@
       "weekNumber": 3,
       "title": "Health Policy Basics",
       "chapters": "Chapter 5–6",
+      "objectives": [
+        "Describe the stages of the health policy process",
+        "Distinguish between different types of health policy (regulatory, financing, allocative)",
+        "Analyze arguments for and against a policy proposal",
+        "Identify the types of evidence that influence policy decisions"
+      ],
       "activity": {
         "type": "policy",
         "title": "Policy Analysis Exercise",
@@ -70,6 +88,12 @@
       "weekNumber": 4,
       "title": "Healthcare Workforce",
       "chapters": "Chapter 7–8",
+      "objectives": [
+        "Describe the composition of the U.S. healthcare workforce",
+        "Explain the causes and effects of provider shortages",
+        "Identify policy strategies used to address workforce distribution",
+        "Connect workforce issues to access and population health outcomes"
+      ],
       "activity": {
         "type": "scenario",
         "title": "Addressing Workforce Shortages",
@@ -91,6 +115,12 @@
       "weekNumber": 5,
       "title": "Health Disparities & Equity",
       "chapters": "Chapter 9–10",
+      "objectives": [
+        "Define health disparities and health equity",
+        "Identify populations most affected by persistent health disparities",
+        "Explain structural and systemic factors that contribute to disparities",
+        "Describe what a health equity-centered policy approach looks like"
+      ],
       "activity": {
         "type": "reflective",
         "title": "Examining Health Disparities",
@@ -112,6 +142,12 @@
       "weekNumber": 6,
       "title": "Health Advocacy in Practice",
       "chapters": "Chapter 11–12",
+      "objectives": [
+        "Define health advocacy and its role in the policy process",
+        "Identify key decision-makers and stakeholders in a policy campaign",
+        "Select appropriate advocacy tactics for a specific audience",
+        "Apply advocacy concepts to your own Health Advocacy Project"
+      ],
       "activity": {
         "type": "system_mapping",
         "title": "Mapping Your Advocacy Strategy",
@@ -133,6 +169,12 @@
       "weekNumber": 7,
       "title": "Building Your Policy Argument",
       "chapters": "Chapter 13",
+      "objectives": [
+        "Construct a clear and specific policy recommendation",
+        "Support a policy argument with evidence from scholarly research",
+        "Anticipate and address counterarguments",
+        "Identify the appropriate decision-maker for your policy recommendation"
+      ],
       "activity": {
         "type": "concept",
         "title": "Strengthening Your Policy Recommendation",
@@ -154,6 +196,12 @@
       "weekNumber": 8,
       "title": "Presentations & Reflection",
       "chapters": "Course Review",
+      "objectives": [
+        "Organize an advocacy presentation with a clear structure",
+        "Deliver a compelling problem statement and call to action",
+        "Reflect on how the app supported your learning this semester",
+        "Prepare your App Reflection for submission in Blackboard"
+      ],
       "activity": {
         "type": "reflective",
         "title": "Preparing Your Advocacy Presentation",
