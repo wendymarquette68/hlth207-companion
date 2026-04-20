@@ -101,9 +101,26 @@ export function ActivityPage() {
               ? new Date(response.submittedAt).toLocaleString()
               : ''}
           </p>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-400 mt-1 mb-6">
             Activity responses stay in the app and are not exported.
           </p>
+
+          {week.nextStep && (
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
+              <p className="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-2">
+                What to do next
+              </p>
+              <p className="text-sm text-slate-700 mb-4 leading-relaxed">
+                {week.nextStep.message}
+              </p>
+              <Link
+                to={week.nextStep.path}
+                className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold px-5 py-2 rounded-lg text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+              >
+                {week.nextStep.label} →
+              </Link>
+            </div>
+          )}
         </div>
       ) : (
         <div>

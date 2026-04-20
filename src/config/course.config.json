@@ -17,6 +17,11 @@
           "Who are the key stakeholders (providers, payers, policymakers) involved in this patient's care?",
           "How does the structure of the U.S. health system create these barriers?"
         ]
+      },
+      "nextStep": {
+        "message": "Now go to Health Issue Exploration in the Planning Notes. Use what you just thought about to start identifying the health policy issue you want to explore for your Health Advocacy Project.",
+        "label": "Go to Health Issue Exploration",
+        "path": "/notes/health-issue"
       }
     },
     {
@@ -33,6 +38,11 @@
           "What upstream policy interventions could address these determinants?",
           "Which government level (local, state, federal) would be best positioned to act?"
         ]
+      },
+      "nextStep": {
+        "message": "Go to Health Issue Exploration in the Planning Notes. Add or refine your notes on which population is affected by your health issue and why it matters.",
+        "label": "Go to Health Issue Exploration",
+        "path": "/notes/health-issue"
       }
     },
     {
@@ -49,6 +59,11 @@
           "What arguments would opponents make against this expansion?",
           "What data or evidence would be most persuasive to policymakers on each side?"
         ]
+      },
+      "nextStep": {
+        "message": "Go to Article Research Notes in the Planning Notes. Begin organizing your notes from your first scholarly article on your health policy issue.",
+        "label": "Go to Article Research Notes",
+        "path": "/notes/article-review"
       }
     },
     {
@@ -65,6 +80,11 @@
           "How might workforce shortages affect population health in this county?",
           "What policy solutions have been used in other states to address rural provider shortages?"
         ]
+      },
+      "nextStep": {
+        "message": "Go to Article Research Notes and continue organizing your second scholarly article. Aim to have all three articles recorded before your Article Review assignment is due.",
+        "label": "Go to Article Research Notes",
+        "path": "/notes/article-review"
       }
     },
     {
@@ -81,6 +101,11 @@
           "What role can health policy play in reducing disparities?",
           "What would a health equity-centered policy approach look like for one of these conditions?"
         ]
+      },
+      "nextStep": {
+        "message": "Go to Article Research Notes and complete your notes for all three scholarly articles. When you are done, export your Article Research Notes PDF — you can use it as a reference while writing your Article Review assignment in Blackboard.",
+        "label": "Go to Article Research Notes",
+        "path": "/notes/article-review"
       }
     },
     {
@@ -97,6 +122,11 @@
           "What advocacy tactics would be most effective for reaching your target decision-maker?",
           "What evidence or data is most persuasive for the audience you are targeting?"
         ]
+      },
+      "nextStep": {
+        "message": "Go to Policy Advocacy Notes and start building your policy argument — what change you are recommending, who should act, and what evidence supports it.",
+        "label": "Go to Policy Advocacy Notes",
+        "path": "/notes/policy-advocacy"
       }
     },
     {
@@ -113,6 +143,11 @@
           "Who is the specific decision-maker or body that should take action?",
           "What is the most likely counterargument, and how would you respond to it?"
         ]
+      },
+      "nextStep": {
+        "message": "Go to Policy Advocacy Notes and finalize your argument. When ready, export your Policy Advocacy Notes PDF to use as a reference while writing your Policy Letter in Blackboard.",
+        "label": "Go to Policy Advocacy Notes",
+        "path": "/notes/policy-advocacy"
       }
     },
     {
@@ -129,6 +164,11 @@
           "What is your specific, actionable call to action?",
           "What question do you anticipate from the audience, and how will you answer it?"
         ]
+      },
+      "nextStep": {
+        "message": "Go to Presentation Planning Notes to organize your slides and talking points. When ready, export your Presentation Planning PDF. Then complete the App Reflection — export it as a PDF and submit it in Blackboard.",
+        "label": "Go to Presentation Planning Notes",
+        "path": "/notes/presentation"
       }
     }
   ],
