@@ -1,4 +1,5 @@
 import { useSession } from '../../context/SessionContext'
+import { useCourseVersion } from '../../hooks/useCourseVersion'
 import { useNotes } from '../../hooks/useNotes'
 import { NoteField } from '../../components/NoteField'
 import { SaveIndicator } from '../../components/SaveIndicator'
@@ -16,11 +17,12 @@ const FIELDS = [
 
 export function Presentation() {
   const { session } = useSession()
+  const version = useCourseVersion()
   const { notes, update, savedAt } = useNotes('presentation')
 
   const handleExport = () => {
     const sections = FIELDS.map(f => ({ heading: f.label, content: notes[f.key] ?? '' }))
-    generatePDF('presentation', session?.studentName ?? '', session?.section ?? '', sections)
+    generatePDF('presentation', session?.studentName ?? '', session?.section ?? '', sections, version.label)
     save('presentation_exported', true)
   }
 

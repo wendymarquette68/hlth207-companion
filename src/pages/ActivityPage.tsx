@@ -2,17 +2,18 @@ import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useActivityResponse } from '../hooks/useActivityResponse'
 import { useProjectConnection } from '../hooks/useProjectConnection'
+import { useCourseVersion } from '../hooks/useCourseVersion'
 import { useSession } from '../context/SessionContext'
 import { isBlocked } from '../utils/guardrail'
 import { GuardrailAlert } from '../components/GuardrailAlert'
 import { SaveIndicator } from '../components/SaveIndicator'
 import { generateWeeklyNotesPDF } from '../utils/pdf'
-import config from '../config/course.config.json'
 
 export function ActivityPage() {
   const { weekNumber } = useParams<{ weekNumber: string }>()
   const num = parseInt(weekNumber ?? '1', 10)
-  const week = config.weeks.find(w => w.weekNumber === num)
+  const version = useCourseVersion()
+  const week = version.weeks.find(w => w.weekNumber === num)
   const { session } = useSession()
   const { response, submit } = useActivityResponse(num)
   const { note: projectNote, setNote: setProjectNote, savedAt: projectSavedAt } = useProjectConnection(num)
@@ -24,21 +25,15 @@ export function ActivityPage() {
     return (
       <div>
         <p className="text-slate-600">Activity not found.</p>
-        <Link to="/dashboard" className="text-blue-700 text-sm hover:underline">
-          ← Back to Dashboard
-        </Link>
+        <Link to="/dashboard" className="text-blue-700 text-sm hover:underline">← Back to Dashboard</Link>
       </div>
     )
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const text = e.target.value
-    if (isBlocked(text)) {
-      setBlocked(true)
-    } else {
-      setBlocked(false)
-      setDraft(text)
-    }
+    if (isBlocked(text)) { setBlocked(true) }
+    else { setBlocked(false); setDraft(text) }
   }
 
   const handleSubmit = () => {
@@ -57,7 +52,8 @@ export function ActivityPage() {
       week.projectConnection?.prompts ?? [],
       projectNote,
       session?.studentName ?? '',
-      session?.section ?? ''
+      session?.section ?? '',
+      version.label
     )
   }
 
@@ -71,16 +67,13 @@ export function ActivityPage() {
 
   return (
     <div>
-      <Link
-        to="/dashboard"
-        className="text-sm text-blue-700 hover:underline focus:outline-none focus:underline mb-6 inline-block"
-      >
+      <Link to="/dashboard" className="text-sm text-blue-700 hover:underline mb-6 inline-block">
         ← Back to Dashboard
       </Link>
 
       <div className="mb-2 flex items-center gap-2">
         <span className="text-xs font-semibold bg-blue-100 text-blue-800 rounded-full px-2.5 py-0.5">
-          Week {week.weekNumber}
+          {week.label}
         </span>
         <span className="text-xs font-semibold bg-slate-100 text-slate-600 rounded-full px-2.5 py-0.5">
           {activityTypeBadge[week.activity.type] ?? week.activity.type}
@@ -109,22 +102,17 @@ export function ActivityPage() {
 
       {/* Activity */}
       <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6">
-        <h2 className="text-sm font-semibold text-blue-900 mb-2">
-          {week.activity.title}
-        </h2>
+        <h2 className="text-sm font-semibold text-blue-900 mb-2">{week.activity.title}</h2>
         <p className="text-sm text-slate-700 mb-4 whitespace-pre-line leading-relaxed">
           {week.activity.prompt}
         </p>
         <ol className="list-decimal list-inside space-y-1">
           {week.activity.questions.map((q, i) => (
-            <li key={i} className="text-sm text-slate-700">
-              {q}
-            </li>
+            <li key={i} className="text-sm text-slate-700">{q}</li>
           ))}
         </ol>
       </div>
 
-      {/* Activity Response */}
       {submitted ? (
         <div>
           <div className="flex items-center justify-between mb-2">
@@ -135,8 +123,7 @@ export function ActivityPage() {
             {response?.text}
           </div>
           <p className="text-xs text-slate-400 mt-2">
-            Submitted{' '}
-            {response?.submittedAt ? new Date(response.submittedAt).toLocaleString() : ''}
+            Submitted {response?.submittedAt ? new Date(response.submittedAt).toLocaleString() : ''}
           </p>
           <p className="text-xs text-slate-400 mt-1 mb-8">
             Activity responses stay in the app and are not exported.
@@ -147,7 +134,6 @@ export function ActivityPage() {
             <h2 className="text-sm font-semibold text-green-900 mb-1">
               Health Advocacy Project Connection
             </h2>
-
             {week.projectConnection && (
               <div className="mb-4">
                 <p className="text-xs text-green-800 leading-relaxed mb-3">
@@ -164,7 +150,6 @@ export function ActivityPage() {
                 </ol>
               </div>
             )}
-
             <textarea
               id={`project-connection-${num}`}
               rows={6}
@@ -179,7 +164,7 @@ export function ActivityPage() {
                 onClick={handleExportWeekNotes}
                 className="bg-green-700 hover:bg-green-800 text-white font-semibold px-4 py-2 rounded-lg text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
               >
-                Export Week {week.weekNumber} Notes PDF
+                Export {week.label} Notes PDF
               </button>
             </div>
             <p className="text-xs text-slate-400 mt-2">
@@ -193,9 +178,7 @@ export function ActivityPage() {
               <p className="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-2">
                 What to do next
               </p>
-              <p className="text-sm text-slate-700 mb-4 leading-relaxed">
-                {week.nextStep.message}
-              </p>
+              <p className="text-sm text-slate-700 mb-4 leading-relaxed">{week.nextStep.message}</p>
               <Link
                 to={week.nextStep.path}
                 className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold px-5 py-2 rounded-lg text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
@@ -207,10 +190,7 @@ export function ActivityPage() {
         </div>
       ) : (
         <div>
-          <label
-            htmlFor="activity-response"
-            className="block text-sm font-semibold text-slate-700 mb-2"
-          >
+          <label htmlFor="activity-response" className="block text-sm font-semibold text-slate-700 mb-2">
             Your Response
           </label>
           <textarea
@@ -221,11 +201,7 @@ export function ActivityPage() {
             placeholder="Type your response here..."
             className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 focus:outline-none resize-y"
           />
-          {blocked && (
-            <div className="mt-2">
-              <GuardrailAlert />
-            </div>
-          )}
+          {blocked && <div className="mt-2"><GuardrailAlert /></div>}
           <p className="text-xs text-slate-400 mt-1 mb-4">
             Responses are saved locally and are not exported as assignments.
           </p>

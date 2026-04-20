@@ -1,295 +1,619 @@
 {
   "courseTitle": "HLTH 207",
-  "semester": "Summer 2026",
-  "reflectionUnlockWeek": 8,
-  "weeks": [
+  "versions": [
     {
-      "weekNumber": 1,
-      "title": "Introduction to Health Systems",
-      "chapters": "Chapter 1–2",
-      "objectives": [
-        "Identify the major components of the U.S. health system",
-        "Describe how fragmentation affects patient access to care",
-        "Recognize the roles of key stakeholders in health care delivery",
-        "Connect health system structure to real patient experiences"
-      ],
-      "activity": {
-        "type": "scenario",
-        "title": "Mapping the Health System",
-        "prompt": "The U.S. health system is often described as fragmented — multiple payers, providers, and levels of government all play a role.\n\nConsider a patient recently diagnosed with Type 2 diabetes who is uninsured and lives in a rural area.",
-        "questions": [
-          "What parts of the health system would this patient need to navigate to receive care?",
-          "What barriers might prevent them from accessing needed services?",
-          "Who are the key stakeholders (providers, payers, policymakers) involved in this patient's care?",
-          "How does the structure of the U.S. health system create these barriers?"
-        ]
-      },
-      "projectConnection": {
-        "intro": "Think about the health issue you are considering for your Health Advocacy Project. This week's content on health systems gives you a foundation for understanding how that issue fits into the bigger picture.",
-        "prompts": [
-          "What health issue are you thinking about exploring? Describe it in 1–2 sentences.",
-          "Which part of the health system is most involved in your issue — providers, payers, public health, or policy?",
-          "Who is the population most affected by this issue?",
-          "What barriers in the health system make this issue difficult to address?"
-        ]
-      },
-      "nextStep": {
-        "message": "Now go to Health Issue Exploration in the Planning Notes. Use what you just thought about to start identifying the health policy issue you want to explore for your Health Advocacy Project.",
-        "label": "Go to Health Issue Exploration",
-        "path": "/notes/health-issue"
-      }
+      "id": "summer",
+      "label": "Summer Session",
+      "description": "5 weeks · 3 weeks of content per module",
+      "reflectionUnlockWeek": 5,
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "title": "Health Systems, Social Determinants & Policy Foundations",
+          "label": "Weeks 1–3",
+          "chapters": "Chapters 1–6",
+          "objectives": [
+            "Identify the major components of the U.S. health system",
+            "Explain how social determinants shape health outcomes",
+            "Describe the stages of the health policy process",
+            "Distinguish types of health policy and levels of government"
+          ],
+          "activity": {
+            "type": "scenario",
+            "title": "From System to Policy",
+            "prompt": "A rural county has high rates of Type 2 diabetes among low-income residents. The county lacks primary care providers, grocery stores with fresh food are scarce, and public transportation is limited.",
+            "questions": [
+              "Which components of the health system are failing this community?",
+              "Which social determinants are most prominent in this scenario?",
+              "What type of policy intervention — regulatory, financing, or allocative — would be most effective?",
+              "At what level of government (local, state, federal) should action be taken, and why?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "These first three weeks give you the foundational framework for your Health Advocacy Project. Use this space to begin connecting that framework to your chosen issue.",
+            "prompts": [
+              "What health issue are you exploring for your project? Describe it in 1–2 sentences.",
+              "Which part of the health system is most involved in your issue?",
+              "Which social determinants contribute to your issue?",
+              "What level of policy (local, state, federal) would address your issue?"
+            ]
+          },
+          "nextStep": {
+            "message": "Go to Health Issue Exploration in the Planning Notes and record your initial ideas about your health policy issue, the affected population, and the level of policy involved.",
+            "label": "Go to Health Issue Exploration",
+            "path": "/notes/health-issue"
+          }
+        },
+        {
+          "weekNumber": 2,
+          "title": "Workforce, Disparities & Advocacy in Practice",
+          "label": "Weeks 4–6",
+          "chapters": "Chapters 7–12",
+          "objectives": [
+            "Explain the causes and effects of healthcare workforce shortages",
+            "Define health disparities and equity",
+            "Describe what a health equity-centered policy approach looks like",
+            "Identify key decision-makers and advocacy tactics"
+          ],
+          "activity": {
+            "type": "system_mapping",
+            "title": "Equity, Workforce & Advocacy Strategy",
+            "prompt": "The population you identified for your Health Advocacy Project faces barriers to care. Consider the workforce, equity, and advocacy dimensions of your issue.",
+            "questions": [
+              "Are there workforce shortages or maldistribution issues affecting your population? How?",
+              "Does your issue disproportionately affect a specific racial, ethnic, or income group? What does data show?",
+              "Who is the key decision-maker with the power to change the policy you are recommending?",
+              "What advocacy tactic would be most effective for reaching that decision-maker?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Weeks 4–6 deepen your understanding of who is affected and how to advocate for change. Use these prompts to sharpen your project.",
+            "prompts": [
+              "How does workforce or access relate to your health issue?",
+              "Is your issue a health equity issue? Which group is most affected and why?",
+              "Who has the power to change the policy you are recommending?",
+              "What is your core advocacy message — what do you want decision-makers to do?"
+            ]
+          },
+          "nextStep": {
+            "message": "Go to Article Research Notes and begin organizing your scholarly articles. You should have at least one article ready to record.",
+            "label": "Go to Article Research Notes",
+            "path": "/notes/article-review"
+          }
+        },
+        {
+          "weekNumber": 3,
+          "title": "Building Your Policy Argument",
+          "label": "Weeks 7–9",
+          "chapters": "Chapter 13",
+          "objectives": [
+            "Construct a clear and specific policy recommendation",
+            "Support a policy argument with scholarly evidence",
+            "Anticipate and address counterarguments",
+            "Identify the appropriate decision-maker for your recommendation"
+          ],
+          "activity": {
+            "type": "policy",
+            "title": "Stress-Testing Your Policy Argument",
+            "prompt": "A strong policy argument requires a specific recommendation, solid evidence, a named decision-maker, and a prepared response to opposition.",
+            "questions": [
+              "State your policy recommendation in one clear, specific sentence.",
+              "What is the strongest piece of evidence from your research that supports your recommendation?",
+              "Who is the specific decision-maker or governing body that should act?",
+              "What is the most likely counterargument, and how would you respond?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "This is the core week for your policy argument. Use these prompts to build and test your recommendation before writing your Policy Letter.",
+            "prompts": [
+              "Write your policy recommendation in one sentence — be specific.",
+              "Which article finding is most persuasive for your argument?",
+              "What outcome would you expect if your policy is implemented?",
+              "What counterargument do you need to be ready to address?"
+            ]
+          },
+          "nextStep": {
+            "message": "Go to Policy Advocacy Notes and record your full policy argument. When done, export your Policy Advocacy Notes PDF to use while writing your Policy Letter in Blackboard.",
+            "label": "Go to Policy Advocacy Notes",
+            "path": "/notes/policy-advocacy"
+          }
+        },
+        {
+          "weekNumber": 4,
+          "title": "Presentation Planning",
+          "label": "Weeks 10–12",
+          "chapters": "Course Materials",
+          "objectives": [
+            "Organize an advocacy presentation with a clear structure",
+            "Deliver a compelling problem statement and call to action",
+            "Select evidence that will resonate with a general audience",
+            "Prepare for audience questions"
+          ],
+          "activity": {
+            "type": "concept",
+            "title": "Structuring Your Advocacy Presentation",
+            "prompt": "A strong advocacy presentation opens with the problem, presents evidence, delivers a recommendation, and closes with a clear call to action.",
+            "questions": [
+              "What is the one-sentence problem statement that will open your presentation?",
+              "Which piece of evidence will you lead with, and why will it resonate with your audience?",
+              "What is your specific, actionable call to action?",
+              "What question do you anticipate from the audience, and how will you answer it?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Use this space to think through how you will present your Health Advocacy Project to an audience.",
+            "prompts": [
+              "How will you open your presentation to capture attention immediately?",
+              "Which three pieces of evidence are most compelling for a general audience?",
+              "What do you want your audience to do after hearing your presentation?",
+              "What is the most challenging question you might face, and what is your answer?"
+            ]
+          },
+          "nextStep": {
+            "message": "Go to Presentation Planning Notes and organize your slides and talking points. Export your Presentation Planning PDF when done.",
+            "label": "Go to Presentation Planning Notes",
+            "path": "/notes/presentation"
+          }
+        },
+        {
+          "weekNumber": 5,
+          "title": "Presentations & Reflection",
+          "label": "Weeks 13–14",
+          "chapters": "Course Review",
+          "objectives": [
+            "Deliver your Health Advocacy Project presentation",
+            "Reflect on how the app supported your learning",
+            "Identify what helped most and what could improve",
+            "Prepare your App Reflection for Blackboard submission"
+          ],
+          "activity": {
+            "type": "reflective",
+            "title": "Final Reflection on Your Advocacy Journey",
+            "prompt": "You have reached the end of the course. Look back at the full arc of your Health Advocacy Project — from identifying the issue to building the argument to presenting it.",
+            "questions": [
+              "How has your understanding of your health issue changed from Week 1 to now?",
+              "What was the most difficult part of building your policy argument?",
+              "What is the most important thing you want your audience to take away from your presentation?",
+              "If you could change one thing about your project, what would it be?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "This is your final week. Use these prompts to close the loop on your project and prepare for your App Reflection submission.",
+            "prompts": [
+              "What is the single most important thing you learned about health policy through this project?",
+              "How did the planning notes help you organize your assignments?",
+              "What would you do differently if you were starting the project today?",
+              "What do you hope changes as a result of the advocacy work you presented?"
+            ]
+          },
+          "nextStep": {
+            "message": "Complete the App Reflection below. Export your Reflection PDF and submit it in Blackboard Ultra — this is your final course deliverable.",
+            "label": "Go to App Reflection",
+            "path": "/reflection"
+          }
+        }
+      ]
     },
     {
-      "weekNumber": 2,
-      "title": "Social Determinants of Health",
-      "chapters": "Chapter 3–4",
-      "objectives": [
-        "Define the social determinants of health and their categories",
-        "Explain how conditions outside of health care shape health outcomes",
-        "Apply the SDOH framework to a community scenario",
-        "Identify upstream policy levers that address social determinants"
-      ],
-      "activity": {
-        "type": "concept",
-        "title": "Applying the Social Determinants Framework",
-        "prompt": "Social determinants of health (SDOH) include the conditions in which people are born, grow, live, work, and age.\n\nConsider a low-income neighborhood with limited grocery stores, high unemployment, and poor public transportation.",
-        "questions": [
-          "Which social determinants of health are most prominent in this scenario?",
-          "How might these determinants affect residents' health outcomes?",
-          "What upstream policy interventions could address these determinants?",
-          "Which government level (local, state, federal) would be best positioned to act?"
-        ]
-      },
-      "projectConnection": {
-        "intro": "Social determinants often sit at the root of the health issue you are exploring. This week, think about the social conditions that contribute to your issue.",
-        "prompts": [
-          "Which social determinants of health contribute to the issue you are exploring (e.g., income, housing, education, neighborhood)?",
-          "How do those social conditions affect the population you identified?",
-          "Does your issue affect certain communities more than others? Why?",
-          "Would a policy solution need to address social determinants, or just health care access?"
-        ]
-      },
-      "nextStep": {
-        "message": "Go to Health Issue Exploration in the Planning Notes. Add or refine your notes on which population is affected by your health issue and why it matters.",
-        "label": "Go to Health Issue Exploration",
-        "path": "/notes/health-issue"
-      }
+      "id": "winter",
+      "label": "Winter Session",
+      "description": "3.5 weeks · 5 chapters per week",
+      "reflectionUnlockWeek": 4,
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "title": "Health Systems, Social Determinants & Policy Foundations",
+          "label": "Week 1",
+          "chapters": "Chapters 1–5",
+          "objectives": [
+            "Identify the major components of the U.S. health system",
+            "Explain how social determinants shape health outcomes",
+            "Describe the stages of the health policy process",
+            "Apply the SDOH framework to a real community scenario"
+          ],
+          "activity": {
+            "type": "scenario",
+            "title": "Connecting Systems, Determinants & Policy",
+            "prompt": "A low-income urban neighborhood has high rates of asthma among children. Air quality is poor, housing is substandard, and the nearest pediatric clinic is 12 miles away.",
+            "questions": [
+              "Which components of the health system are involved in this scenario?",
+              "Which social determinants of health are most prominent?",
+              "What type of health policy would most effectively address this issue — regulatory, financing, or allocative?",
+              "At what level of government should action be taken, and why?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Week 1 covers the foundation of your entire project. Use these prompts to anchor your Health Advocacy Project from the very beginning.",
+            "prompts": [
+              "What health issue are you exploring? State it clearly in one sentence.",
+              "Which social determinants are driving this issue for the population you identified?",
+              "What type of policy change would address this issue?",
+              "At what level of government would this change need to happen?"
+            ]
+          },
+          "nextStep": {
+            "message": "Go to Health Issue Exploration and record your initial notes. The pace is fast — aim to have all four fields completed before Week 2.",
+            "label": "Go to Health Issue Exploration",
+            "path": "/notes/health-issue"
+          }
+        },
+        {
+          "weekNumber": 2,
+          "title": "Workforce, Disparities, Equity & Advocacy",
+          "label": "Week 2",
+          "chapters": "Chapters 6–10",
+          "objectives": [
+            "Explain causes and effects of healthcare workforce shortages",
+            "Define health disparities and health equity",
+            "Identify structural factors that contribute to health disparities",
+            "Apply advocacy concepts to a specific health issue"
+          ],
+          "activity": {
+            "type": "system_mapping",
+            "title": "Workforce, Equity & Advocacy Strategy",
+            "prompt": "The population affected by your health issue faces multiple overlapping barriers — workforce shortages, structural inequities, and limited advocacy infrastructure.",
+            "questions": [
+              "Are workforce shortages or provider maldistribution a factor in your issue? How?",
+              "Does your issue disproportionately affect a specific racial, ethnic, or socioeconomic group?",
+              "What structural factors explain why this group is more affected?",
+              "Who is the key decision-maker you need to persuade, and what is your core message?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Week 2 connects your issue to equity and advocacy strategy. Use these prompts to sharpen your project direction.",
+            "prompts": [
+              "Is your issue a health equity issue? Describe the disparity using data if possible.",
+              "What structural or historical factors explain the disparity you identified?",
+              "Who has the power to change the policy you are recommending?",
+              "What advocacy tactic will you use and why?"
+            ]
+          },
+          "nextStep": {
+            "message": "Go to Article Research Notes and record notes from your three scholarly articles. You need these done before your Article Review assignment deadline.",
+            "label": "Go to Article Research Notes",
+            "path": "/notes/article-review"
+          }
+        },
+        {
+          "weekNumber": 3,
+          "title": "Health Advocacy & Building Your Policy Argument",
+          "label": "Week 3",
+          "chapters": "Chapters 11–13",
+          "objectives": [
+            "Construct a clear and specific policy recommendation",
+            "Support a policy argument with scholarly evidence",
+            "Anticipate and respond to counterarguments",
+            "Map the full advocacy strategy for your project"
+          ],
+          "activity": {
+            "type": "policy",
+            "title": "Policy Argument & Advocacy Plan",
+            "prompt": "You are preparing your policy argument and advocacy strategy. A strong argument is specific, evidence-based, and addresses opposition directly.",
+            "questions": [
+              "State your policy recommendation in one clear, specific sentence.",
+              "What evidence from your three articles most strongly supports your recommendation?",
+              "Who is the specific decision-maker or governing body that should act?",
+              "What is the most likely counterargument, and what is your response?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Week 3 is where your argument comes together. Use these prompts to finalize your policy position before writing your Policy Letter.",
+            "prompts": [
+              "Is your policy recommendation specific enough? Can you name exactly who should do what?",
+              "Which article finding is your strongest piece of evidence and why?",
+              "What impact would your recommended policy have on the affected population?",
+              "How will you frame your argument for your specific decision-maker's priorities?"
+            ]
+          },
+          "nextStep": {
+            "message": "Go to Policy Advocacy Notes and finalize your argument. Export your PDF before writing your Policy Letter in Blackboard.",
+            "label": "Go to Policy Advocacy Notes",
+            "path": "/notes/policy-advocacy"
+          }
+        },
+        {
+          "weekNumber": 4,
+          "title": "Presentations & Reflection",
+          "label": "Week 3.5",
+          "chapters": "Course Review",
+          "objectives": [
+            "Organize and deliver your Health Advocacy Project presentation",
+            "Reflect on how the app supported your learning",
+            "Complete your App Reflection for Blackboard submission"
+          ],
+          "activity": {
+            "type": "reflective",
+            "title": "Final Presentation Preparation",
+            "prompt": "This is your final push. You have built your issue exploration, article research, and policy argument. Now organize your presentation and close out the course.",
+            "questions": [
+              "What is the one-sentence problem statement that opens your presentation?",
+              "Which three pieces of evidence will you highlight and why?",
+              "What is your specific, actionable call to action?",
+              "What question do you anticipate from the audience and how will you answer it?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "This is your final week. Use these prompts to wrap up your project and prepare your reflection.",
+            "prompts": [
+              "What is the most important thing you learned about health policy through this project?",
+              "How did the compressed winter schedule affect how you approached the project?",
+              "What would you do differently if you had more time?",
+              "What do you hope changes as a result of the advocacy work you presented?"
+            ]
+          },
+          "nextStep": {
+            "message": "Go to Presentation Planning Notes, complete all fields, and export your PDF. Then complete the App Reflection and submit it in Blackboard.",
+            "label": "Go to Presentation Planning Notes",
+            "path": "/notes/presentation"
+          }
+        }
+      ]
     },
     {
-      "weekNumber": 3,
-      "title": "Health Policy Basics",
-      "chapters": "Chapter 5–6",
-      "objectives": [
-        "Describe the stages of the health policy process",
-        "Distinguish between different types of health policy (regulatory, financing, allocative)",
-        "Analyze arguments for and against a policy proposal",
-        "Identify the types of evidence that influence policy decisions"
-      ],
-      "activity": {
-        "type": "policy",
-        "title": "Policy Analysis Exercise",
-        "prompt": "A state legislature is considering a bill that would expand Medicaid eligibility to cover adults up to 150% of the federal poverty level.",
-        "questions": [
-          "Who would benefit from this policy change? Be specific about the population.",
-          "What arguments would supporters make in favor of this expansion?",
-          "What arguments would opponents make against this expansion?",
-          "What data or evidence would be most persuasive to policymakers on each side?"
-        ]
-      },
-      "projectConnection": {
-        "intro": "Now that you understand how health policy works, start thinking about what kind of policy change could address your health issue.",
-        "prompts": [
-          "What type of policy change would address your health issue — regulatory, financing, or allocative?",
-          "At what level of government would this policy change happen — local, state, or federal?",
-          "Who would support this policy change and why?",
-          "What is the strongest argument against the change, and how would you respond to it?"
-        ]
-      },
-      "nextStep": {
-        "message": "Go to Article Research Notes in the Planning Notes. Begin organizing your notes from your first scholarly article on your health policy issue.",
-        "label": "Go to Article Research Notes",
-        "path": "/notes/article-review"
-      }
-    },
-    {
-      "weekNumber": 4,
-      "title": "Healthcare Workforce",
-      "chapters": "Chapter 7–8",
-      "objectives": [
-        "Describe the composition of the U.S. healthcare workforce",
-        "Explain the causes and effects of provider shortages",
-        "Identify policy strategies used to address workforce distribution",
-        "Connect workforce issues to access and population health outcomes"
-      ],
-      "activity": {
-        "type": "scenario",
-        "title": "Addressing Workforce Shortages",
-        "prompt": "A rural county is experiencing a shortage of behavioral health providers. Wait times for mental health appointments exceed 6 months. The nearest psychiatric hospital is 90 miles away.",
-        "questions": [
-          "What healthcare professionals could address this shortage?",
-          "What barriers affect access to behavioral health services in rural areas?",
-          "How might workforce shortages affect population health in this county?",
-          "What policy solutions have been used in other states to address rural provider shortages?"
-        ]
-      },
-      "projectConnection": {
-        "intro": "Workforce issues may be part of what drives your health issue or complicates the solution. Consider whether the availability of providers is a factor in your project.",
-        "prompts": [
-          "Does your health issue involve a shortage or maldistribution of healthcare providers? If so, how?",
-          "Which types of healthcare workers are most involved in addressing your issue?",
-          "Are there workforce-related barriers that prevent the population you identified from getting care?",
-          "Could a workforce policy (training programs, loan forgiveness, scope-of-practice expansion) be part of your recommendation?"
-        ]
-      },
-      "nextStep": {
-        "message": "Go to Article Research Notes and continue organizing your second scholarly article. Aim to have all three articles recorded before your Article Review assignment is due.",
-        "label": "Go to Article Research Notes",
-        "path": "/notes/article-review"
-      }
-    },
-    {
-      "weekNumber": 5,
-      "title": "Health Disparities & Equity",
-      "chapters": "Chapter 9–10",
-      "objectives": [
-        "Define health disparities and health equity",
-        "Identify populations most affected by persistent health disparities",
-        "Explain structural and systemic factors that contribute to disparities",
-        "Describe what a health equity-centered policy approach looks like"
-      ],
-      "activity": {
-        "type": "reflective",
-        "title": "Examining Health Disparities",
-        "prompt": "Black Americans experience significantly higher rates of hypertension, maternal mortality, and diabetes compared to white Americans. These disparities persist even when controlling for income and education.",
-        "questions": [
-          "What factors beyond income might explain persistent racial health disparities?",
-          "How does structural racism contribute to health outcomes?",
-          "What role can health policy play in reducing disparities?",
-          "What would a health equity-centered policy approach look like for one of these conditions?"
-        ]
-      },
-      "projectConnection": {
-        "intro": "Health disparities are often at the heart of why a health issue matters. This week, examine whether your issue disproportionately affects certain groups and what that means for your policy argument.",
-        "prompts": [
-          "Does your health issue disproportionately affect a particular racial, ethnic, or socioeconomic group? What does the data show?",
-          "Are there structural or historical factors that explain why this group is more affected?",
-          "How does framing your issue as a health equity issue strengthen your policy argument?",
-          "What would a health equity-centered solution look like for your specific issue?"
-        ]
-      },
-      "nextStep": {
-        "message": "Go to Article Research Notes and complete your notes for all three scholarly articles. When you are done, export your Article Research Notes PDF — you can use it as a reference while writing your Article Review assignment in Blackboard.",
-        "label": "Go to Article Research Notes",
-        "path": "/notes/article-review"
-      }
-    },
-    {
-      "weekNumber": 6,
-      "title": "Health Advocacy in Practice",
-      "chapters": "Chapter 11–12",
-      "objectives": [
-        "Define health advocacy and its role in the policy process",
-        "Identify key decision-makers and stakeholders in a policy campaign",
-        "Select appropriate advocacy tactics for a specific audience",
-        "Apply advocacy concepts to your own Health Advocacy Project"
-      ],
-      "activity": {
-        "type": "system_mapping",
-        "title": "Mapping Your Advocacy Strategy",
-        "prompt": "Think about the health policy issue you have selected for your Health Advocacy Project.",
-        "questions": [
-          "Who are the key decision-makers with the power to change this policy?",
-          "Who are the stakeholders who would be affected by a policy change (supporters and opponents)?",
-          "What advocacy tactics would be most effective for reaching your target decision-maker?",
-          "What evidence or data is most persuasive for the audience you are targeting?"
-        ]
-      },
-      "projectConnection": {
-        "intro": "This week connects directly to your project. Use this space to apply advocacy concepts to your specific issue and sharpen your strategy.",
-        "prompts": [
-          "Who is the single most important decision-maker you need to persuade? (A legislator, agency head, school board, etc.)",
-          "What do you know about that decision-maker's priorities or concerns?",
-          "Which advocacy tactic would be most effective for your issue — a policy brief, public testimony, coalition letter, or media campaign?",
-          "What is the one message you want your decision-maker to walk away with?"
-        ]
-      },
-      "nextStep": {
-        "message": "Go to Policy Advocacy Notes and start building your policy argument — what change you are recommending, who should act, and what evidence supports it.",
-        "label": "Go to Policy Advocacy Notes",
-        "path": "/notes/policy-advocacy"
-      }
-    },
-    {
-      "weekNumber": 7,
-      "title": "Building Your Policy Argument",
-      "chapters": "Chapter 13",
-      "objectives": [
-        "Construct a clear and specific policy recommendation",
-        "Support a policy argument with evidence from scholarly research",
-        "Anticipate and address counterarguments",
-        "Identify the appropriate decision-maker for your policy recommendation"
-      ],
-      "activity": {
-        "type": "concept",
-        "title": "Strengthening Your Policy Recommendation",
-        "prompt": "A strong policy argument includes a clear problem statement, evidence of impact, a specific policy recommendation, identification of who should act, and a projected outcome.",
-        "questions": [
-          "State your policy recommendation in one clear sentence.",
-          "What is the strongest piece of evidence supporting your recommendation?",
-          "Who is the specific decision-maker or body that should take action?",
-          "What is the most likely counterargument, and how would you respond to it?"
-        ]
-      },
-      "projectConnection": {
-        "intro": "This is the week to sharpen and finalize your policy argument. Use these prompts to stress-test your recommendation before writing your Policy Letter.",
-        "prompts": [
-          "Write your policy recommendation in one clear, specific sentence.",
-          "Which piece of evidence from your research is most persuasive? Why?",
-          "What outcome would you expect if the policy is implemented? Be specific.",
-          "What is the strongest counterargument, and what is your response?"
-        ]
-      },
-      "nextStep": {
-        "message": "Go to Policy Advocacy Notes and finalize your argument. When ready, export your Policy Advocacy Notes PDF to use as a reference while writing your Policy Letter in Blackboard.",
-        "label": "Go to Policy Advocacy Notes",
-        "path": "/notes/policy-advocacy"
-      }
-    },
-    {
-      "weekNumber": 8,
-      "title": "Presentations & Reflection",
-      "chapters": "Course Review",
-      "objectives": [
-        "Organize an advocacy presentation with a clear structure",
-        "Deliver a compelling problem statement and call to action",
-        "Reflect on how the app supported your learning this semester",
-        "Prepare your App Reflection for submission in Blackboard"
-      ],
-      "activity": {
-        "type": "reflective",
-        "title": "Preparing Your Advocacy Presentation",
-        "prompt": "You are preparing to present your Health Advocacy Project. A strong advocacy presentation opens with the problem, presents evidence, delivers a clear recommendation, and closes with a call to action.",
-        "questions": [
-          "What is the one-sentence problem statement that will open your presentation?",
-          "Which piece of evidence will you lead with and why?",
-          "What is your specific, actionable call to action?",
-          "What question do you anticipate from the audience, and how will you answer it?"
-        ]
-      },
-      "projectConnection": {
-        "intro": "You have arrived at the final week. Use these prompts to pull your entire project together and prepare for your presentation.",
-        "prompts": [
-          "How has your understanding of your health issue changed from Week 1 to now?",
-          "What is the most important thing you want your audience to know about your issue?",
-          "What is your call to action — what do you want people to do after hearing your presentation?",
-          "Looking back at all eight weeks, which week's content was most useful for your project and why?"
-        ]
-      },
-      "nextStep": {
-        "message": "Go to Presentation Planning Notes to organize your slides and talking points. When ready, export your Presentation Planning PDF. Then complete the App Reflection — export it as a PDF and submit it in Blackboard.",
-        "label": "Go to Presentation Planning Notes",
-        "path": "/notes/presentation"
-      }
+      "id": "standard",
+      "label": "Standard Session",
+      "description": "7 weeks · 2 chapters per week",
+      "reflectionUnlockWeek": 7,
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "title": "Introduction to Health Systems",
+          "label": "Week 1",
+          "chapters": "Chapters 1–2",
+          "objectives": [
+            "Identify the major components of the U.S. health system",
+            "Describe how fragmentation affects patient access to care",
+            "Recognize the roles of key stakeholders in health care delivery",
+            "Connect health system structure to real patient experiences"
+          ],
+          "activity": {
+            "type": "scenario",
+            "title": "Mapping the Health System",
+            "prompt": "The U.S. health system is often described as fragmented — multiple payers, providers, and levels of government all play a role.\n\nConsider a patient recently diagnosed with Type 2 diabetes who is uninsured and lives in a rural area.",
+            "questions": [
+              "What parts of the health system would this patient need to navigate to receive care?",
+              "What barriers might prevent them from accessing needed services?",
+              "Who are the key stakeholders involved in this patient's care?",
+              "How does the structure of the U.S. health system create these barriers?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Week 1 introduces the health system framework that will anchor your entire project. Start connecting it to your issue now.",
+            "prompts": [
+              "What health issue are you thinking about exploring? Describe it in 1–2 sentences.",
+              "Which part of the health system is most involved — providers, payers, public health, or policy?",
+              "Who is the population most affected by this issue?",
+              "What barriers in the health system make this issue difficult to address?"
+            ]
+          },
+          "nextStep": {
+            "message": "Go to Health Issue Exploration and begin recording your initial ideas about the health policy issue you want to advocate for.",
+            "label": "Go to Health Issue Exploration",
+            "path": "/notes/health-issue"
+          }
+        },
+        {
+          "weekNumber": 2,
+          "title": "Social Determinants of Health",
+          "label": "Week 2",
+          "chapters": "Chapters 3–4",
+          "objectives": [
+            "Define the social determinants of health and their categories",
+            "Explain how conditions outside health care shape health outcomes",
+            "Apply the SDOH framework to a community scenario",
+            "Identify upstream policy levers that address social determinants"
+          ],
+          "activity": {
+            "type": "concept",
+            "title": "Applying the Social Determinants Framework",
+            "prompt": "Social determinants of health include the conditions in which people are born, grow, live, work, and age.\n\nConsider a low-income neighborhood with limited grocery stores, high unemployment, and poor public transportation.",
+            "questions": [
+              "Which social determinants of health are most prominent in this scenario?",
+              "How might these determinants affect residents' health outcomes?",
+              "What upstream policy interventions could address these determinants?",
+              "Which government level would be best positioned to act?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Social determinants often sit at the root of the health issue you are exploring. Connect this week's framework to your project.",
+            "prompts": [
+              "Which social determinants contribute to the issue you are exploring?",
+              "How do those social conditions affect the population you identified?",
+              "Does your issue affect certain communities more than others? Why?",
+              "Would a policy solution need to address social determinants directly?"
+            ]
+          },
+          "nextStep": {
+            "message": "Return to Health Issue Exploration and add or refine your notes on the population affected and why the issue matters.",
+            "label": "Go to Health Issue Exploration",
+            "path": "/notes/health-issue"
+          }
+        },
+        {
+          "weekNumber": 3,
+          "title": "Health Policy Basics",
+          "label": "Week 3",
+          "chapters": "Chapters 5–6",
+          "objectives": [
+            "Describe the stages of the health policy process",
+            "Distinguish types of health policy",
+            "Analyze arguments for and against a policy proposal",
+            "Identify evidence that influences policy decisions"
+          ],
+          "activity": {
+            "type": "policy",
+            "title": "Policy Analysis Exercise",
+            "prompt": "A state legislature is considering a bill that would expand Medicaid eligibility to cover adults up to 150% of the federal poverty level.",
+            "questions": [
+              "Who would benefit from this policy change?",
+              "What arguments would supporters make in favor of this expansion?",
+              "What arguments would opponents make against it?",
+              "What evidence would be most persuasive to policymakers on each side?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Now that you understand how health policy works, start thinking about what kind of policy change could address your issue.",
+            "prompts": [
+              "What type of policy change would address your issue — regulatory, financing, or allocative?",
+              "At what level of government would this change happen?",
+              "Who would support this change and why?",
+              "What is the strongest argument against the change and how would you respond?"
+            ]
+          },
+          "nextStep": {
+            "message": "Go to Article Research Notes and begin organizing your first scholarly article. Start your literature search this week.",
+            "label": "Go to Article Research Notes",
+            "path": "/notes/article-review"
+          }
+        },
+        {
+          "weekNumber": 4,
+          "title": "Healthcare Workforce & Health Disparities",
+          "label": "Week 4",
+          "chapters": "Chapters 7–8",
+          "objectives": [
+            "Describe the composition of the U.S. healthcare workforce",
+            "Explain causes and effects of provider shortages",
+            "Define health disparities and health equity",
+            "Connect workforce and equity issues to your project"
+          ],
+          "activity": {
+            "type": "scenario",
+            "title": "Workforce Shortages & Equity",
+            "prompt": "A rural county has a shortage of behavioral health providers and a higher-than-average rate of untreated depression among Black residents. Wait times exceed 6 months.",
+            "questions": [
+              "What workforce factors contribute to this shortage?",
+              "How does this shortage intersect with racial health disparities?",
+              "What policy solutions could address both the workforce shortage and the disparity?",
+              "Who should act and at what level of government?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Weeks 4 connects workforce and equity to your project. Use these prompts to examine your issue through both lenses.",
+            "prompts": [
+              "Does your issue involve a workforce shortage or maldistribution? How?",
+              "Does your issue disproportionately affect a specific group? What does the data show?",
+              "What structural factors explain the disparity you identified?",
+              "Could a workforce policy be part of your recommendation?"
+            ]
+          },
+          "nextStep": {
+            "message": "Continue in Article Research Notes — aim to have at least two of your three articles recorded by end of this week.",
+            "label": "Go to Article Research Notes",
+            "path": "/notes/article-review"
+          }
+        },
+        {
+          "weekNumber": 5,
+          "title": "Health Equity & Advocacy in Practice",
+          "label": "Week 5",
+          "chapters": "Chapters 9–10",
+          "objectives": [
+            "Explain structural and systemic factors that drive health disparities",
+            "Describe a health equity-centered policy approach",
+            "Identify key decision-makers and advocacy tactics",
+            "Apply advocacy concepts directly to your project"
+          ],
+          "activity": {
+            "type": "system_mapping",
+            "title": "Mapping Your Advocacy Strategy",
+            "prompt": "Think about the health policy issue you have selected for your Health Advocacy Project.",
+            "questions": [
+              "Who are the key decision-makers with the power to change this policy?",
+              "Who are the stakeholders who would be affected — supporters and opponents?",
+              "What advocacy tactics would be most effective for your decision-maker?",
+              "What evidence is most persuasive for your specific audience?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Week 5 connects health equity and advocacy directly to your project. Use these prompts to sharpen your strategy.",
+            "prompts": [
+              "How does framing your issue as a health equity issue strengthen your argument?",
+              "Who is the single most important decision-maker you need to persuade?",
+              "What do you know about that decision-maker's priorities or concerns?",
+              "What is the one message you want your decision-maker to walk away with?"
+            ]
+          },
+          "nextStep": {
+            "message": "Complete your three article notes and export your Article Research Notes PDF. Then go to Policy Advocacy Notes and begin building your argument.",
+            "label": "Go to Policy Advocacy Notes",
+            "path": "/notes/policy-advocacy"
+          }
+        },
+        {
+          "weekNumber": 6,
+          "title": "Building Your Policy Argument",
+          "label": "Week 6",
+          "chapters": "Chapters 11–12",
+          "objectives": [
+            "Construct a clear and specific policy recommendation",
+            "Support a policy argument with scholarly evidence",
+            "Anticipate and address counterarguments",
+            "Identify the appropriate decision-maker for your recommendation"
+          ],
+          "activity": {
+            "type": "concept",
+            "title": "Strengthening Your Policy Recommendation",
+            "prompt": "A strong policy argument includes a clear problem statement, evidence of impact, a specific recommendation, identification of who should act, and a projected outcome.",
+            "questions": [
+              "State your policy recommendation in one clear sentence.",
+              "What is the strongest piece of evidence supporting your recommendation?",
+              "Who is the specific decision-maker or body that should take action?",
+              "What is the most likely counterargument and how would you respond?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "Week 6 is where your argument comes together. Use these prompts to finalize your policy position.",
+            "prompts": [
+              "Write your policy recommendation in one specific sentence.",
+              "Which article finding is most persuasive and why?",
+              "What outcome would you expect if the policy is implemented?",
+              "How will you frame the argument for your decision-maker's specific priorities?"
+            ]
+          },
+          "nextStep": {
+            "message": "Finalize your Policy Advocacy Notes and export your PDF. Then go to Presentation Planning Notes to begin organizing your presentation.",
+            "label": "Go to Presentation Planning Notes",
+            "path": "/notes/presentation"
+          }
+        },
+        {
+          "weekNumber": 7,
+          "title": "Presentations & Reflection",
+          "label": "Week 7",
+          "chapters": "Chapter 13 & Course Review",
+          "objectives": [
+            "Organize and deliver your Health Advocacy Project presentation",
+            "Reflect on how the app supported your learning this semester",
+            "Complete your App Reflection for Blackboard submission"
+          ],
+          "activity": {
+            "type": "reflective",
+            "title": "Preparing Your Advocacy Presentation",
+            "prompt": "You are preparing to present your Health Advocacy Project. A strong advocacy presentation opens with the problem, presents evidence, delivers a recommendation, and closes with a call to action.",
+            "questions": [
+              "What is the one-sentence problem statement that will open your presentation?",
+              "Which piece of evidence will you lead with and why?",
+              "What is your specific, actionable call to action?",
+              "What question do you anticipate from the audience and how will you answer it?"
+            ]
+          },
+          "projectConnection": {
+            "intro": "This is your final week. Use these prompts to pull your entire project together.",
+            "prompts": [
+              "How has your understanding of your health issue changed from Week 1 to now?",
+              "What is the most important thing you want your audience to know?",
+              "What is your call to action — what do you want people to do?",
+              "Which week's content was most useful for your project and why?"
+            ]
+          },
+          "nextStep": {
+            "message": "Complete your Presentation Planning Notes and export your PDF. Then open the App Reflection, complete all five prompts, export the PDF, and submit it in Blackboard.",
+            "label": "Go to App Reflection",
+            "path": "/reflection"
+          }
+        }
+      ]
     }
   ],
   "reflectionPrompts": [
@@ -300,22 +624,9 @@
     "How could the app be improved for future HLTH 207 students?"
   ],
   "blockedKeywords": [
-    "write my",
-    "write a",
-    "write the",
-    "generate my",
-    "generate a",
-    "draft my",
-    "draft a",
-    "complete my",
-    "do my assignment",
-    "discussion post",
-    "article review",
-    "policy letter",
-    "advocacy letter",
-    "presentation script",
-    "write for me",
-    "do this for me",
-    "finish my"
+    "write my", "write a", "write the", "generate my", "generate a",
+    "draft my", "draft a", "complete my", "do my assignment",
+    "discussion post", "article review", "policy letter", "advocacy letter",
+    "presentation script", "write for me", "do this for me", "finish my"
   ]
 }

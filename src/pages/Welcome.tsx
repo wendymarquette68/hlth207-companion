@@ -9,17 +9,20 @@ export function Welcome() {
   const navigate = useNavigate()
   const [name, setName] = useState('')
   const [section, setSection] = useState('')
+  const [versionId, setVersionId] = useState('')
   const [error, setError] = useState('')
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    if (!name.trim() || !section.trim()) {
-      setError('Please enter your name and section.')
+    if (!name.trim() || !section.trim() || !versionId) {
+      setError('Please complete all fields before continuing.')
       return
     }
-    startSession(name.trim(), section.trim())
+    startSession(name.trim(), section.trim(), versionId)
     navigate('/dashboard')
   }
+
+  const selectedVersion = config.versions.find(v => v.id === versionId)
 
   return (
     <div className="min-h-screen bg-blue-900 flex items-center justify-center px-4">
@@ -28,13 +31,13 @@ export function Welcome() {
           HLTH 207 Companion App
         </h1>
         <p className="text-sm text-slate-500 mb-6">
-          {config.semester} — Learning workspace
+          Guided learning workspace for the Health Advocacy Project
         </p>
 
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
           This app helps you apply course readings, organize research ideas, and
-          plan your Health Advocacy Project. Assignments are written and
-          submitted independently in Blackboard Ultra.
+          plan your Health Advocacy Project. Assignments are written and submitted
+          independently in Blackboard Ultra.
         </p>
 
         <form onSubmit={handleSubmit} noValidate>
@@ -56,7 +59,7 @@ export function Welcome() {
             />
           </div>
 
-          <div className="mb-6">
+          <div className="mb-4">
             <label
               htmlFor="section"
               className="block text-sm font-semibold text-slate-700 mb-1"
@@ -71,6 +74,44 @@ export function Welcome() {
               placeholder="e.g. Section 01"
               className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-100 focus:outline-none"
             />
+          </div>
+
+          <div className="mb-6">
+            <label className="block text-sm font-semibold text-slate-700 mb-2">
+              How many weeks is your course?
+            </label>
+            <div className="space-y-2">
+              {config.versions.map(v => (
+                <label
+                  key={v.id}
+                  className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${
+                    versionId === v.id
+                      ? 'border-blue-500 bg-blue-50'
+                      : 'border-slate-200 hover:border-blue-300'
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="version"
+                    value={v.id}
+                    checked={versionId === v.id}
+                    onChange={() => setVersionId(v.id)}
+                    className="mt-0.5 accent-blue-700"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold text-slate-800">{v.label}</p>
+                    <p className="text-xs text-slate-500">{v.description}</p>
+                  </div>
+                </label>
+              ))}
+            </div>
+
+            {selectedVersion && (
+              <p className="text-xs text-blue-700 mt-2 px-1">
+                Your course has <strong>{selectedVersion.weeks.length} modules</strong>.
+                Activities and content are paced for {selectedVersion.description.toLowerCase()}.
+              </p>
+            )}
           </div>
 
           {error && (
@@ -88,7 +129,7 @@ export function Welcome() {
         </form>
 
         <p className="text-xs text-slate-400 mt-5 text-center">
-          Your notes are stored locally on this device. Data is cleared when you export and sign out.
+          Your notes are stored locally on this device and cleared when you sign out.
         </p>
       </div>
     </div>

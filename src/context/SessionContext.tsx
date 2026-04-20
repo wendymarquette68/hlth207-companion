@@ -5,11 +5,12 @@ import { load, save } from '../utils/storage'
 interface Session {
   studentName: string
   section: string
+  versionId: string
 }
 
 interface SessionContextType {
   session: Session | null
-  startSession: (name: string, section: string) => void
+  startSession: (name: string, section: string, versionId: string) => void
   clearSession: () => void
 }
 
@@ -24,13 +25,11 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     if (session) save('session', session)
   }, [session])
 
-  const startSession = (studentName: string, section: string) => {
-    setSession({ studentName, section })
+  const startSession = (studentName: string, section: string, versionId: string) => {
+    setSession({ studentName, section, versionId })
   }
 
-  const clearSession = () => {
-    setSession(null)
-  }
+  const clearSession = () => setSession(null)
 
   return (
     <SessionContext.Provider value={{ session, startSession, clearSession }}>

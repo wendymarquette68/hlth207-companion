@@ -1,18 +1,17 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useSession } from '../context/SessionContext'
+import { useCourseVersion } from '../hooks/useCourseVersion'
 import { load, save } from '../utils/storage'
 import { generatePDF } from '../utils/pdf'
 import { SaveIndicator } from '../components/SaveIndicator'
 import config from '../config/course.config.json'
 
-function getCurrentWeek(): number {
-  return config.weeks.length
-}
-
 export function ReflectionPage() {
   const { session } = useSession()
-  const isWeekUnlocked = getCurrentWeek() >= config.reflectionUnlockWeek
+  const version = useCourseVersion()
+  const totalWeeks = version.weeks.length
+  const isWeekUnlocked = totalWeeks >= version.reflectionUnlockWeek
   const isPresentationDone = load<boolean>('presentation_exported') === true
   const isUnlocked = isWeekUnlocked && isPresentationDone
   const storageKey = 'reflection'
@@ -45,17 +44,16 @@ export function ReflectionPage() {
       heading: prompt,
       content: responses[i] ?? '',
     }))
-    generatePDF('reflection', session?.studentName ?? '', session?.section ?? '', sections)
+    generatePDF('reflection', session?.studentName ?? '', session?.section ?? '', sections, version.label)
   }
 
-  // Week not yet unlocked
   if (!isWeekUnlocked) {
     return (
       <div>
         <h1 className="text-xl font-bold text-slate-800 mb-2">App Reflection</h1>
         <div className="bg-slate-100 border border-slate-200 rounded-xl p-6">
           <p className="text-slate-600 text-sm font-medium mb-1">
-            🔒 This module unlocks in Week {config.reflectionUnlockWeek}.
+            🔒 This module unlocks in the final week of your course.
           </p>
           <p className="text-slate-400 text-xs">
             Complete your weekly activities and planning notes until then.
@@ -65,7 +63,6 @@ export function ReflectionPage() {
     )
   }
 
-  // Week unlocked but presentation not yet exported
   if (!isPresentationDone) {
     return (
       <div>
@@ -94,7 +91,6 @@ export function ReflectionPage() {
     )
   }
 
-  // Fully unlocked
   return (
     <div>
       <h1 className="text-xl font-bold text-slate-800 mb-1">App Reflection</h1>

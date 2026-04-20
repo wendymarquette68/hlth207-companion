@@ -1,4 +1,5 @@
 import { useSession } from '../../context/SessionContext'
+import { useCourseVersion } from '../../hooks/useCourseVersion'
 import { useNotes } from '../../hooks/useNotes'
 import { NoteField } from '../../components/NoteField'
 import { SaveIndicator } from '../../components/SaveIndicator'
@@ -39,6 +40,7 @@ function ArticleSection({ index, notes, update }: { index: number; notes: Record
 
 export function ArticleReview() {
   const { session } = useSession()
+  const version = useCourseVersion()
   const { notes, update, savedAt } = useNotes('article_review')
 
   const handleExport = () => {
@@ -50,7 +52,7 @@ export function ArticleReview() {
         sections.push({ heading: f.label, content: notes[key] ?? '' })
       })
     }
-    generatePDF('article_review', session?.studentName ?? '', session?.section ?? '', sections)
+    generatePDF('article_review', session?.studentName ?? '', session?.section ?? '', sections, version.label)
   }
 
   return (
