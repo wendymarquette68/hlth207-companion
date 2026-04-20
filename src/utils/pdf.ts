@@ -19,19 +19,23 @@ const TITLES: Record<ExportType, string> = {
 interface Section {
   heading: string
   content: string
+  isList?: boolean
+  items?: string[]
 }
 
-export function generatePDF(
-  exportType: ExportType,
-  studentName: string,
-  section: string,
-  sections: Section[]
-): void {
+function buildDoc(studentName: string, section: string) {
   const doc = new jsPDF({ unit: 'pt', format: 'letter' })
   const pageW = doc.internal.pageSize.getWidth()
   const margin = 60
   const contentW = pageW - margin * 2
   let y = margin
+
+  const checkPage = (needed: number) => {
+    if (y + needed > doc.internal.pageSize.getHeight() - margin) {
+      doc.addPage()
+      y = margin
+    }
+  }
 
   const addText = (
     text: string,
@@ -44,10 +48,7 @@ export function generatePDF(
     doc.setTextColor(...color)
     const lines = doc.splitTextToSize(text, contentW)
     const lineH = fontSize * 1.4
-    if (y + lines.length * lineH > doc.internal.pageSize.getHeight() - margin) {
-      doc.addPage()
-      y = margin
-    }
+    checkPage(lines.length * lineH)
     doc.text(lines, margin, y)
     y += lines.length * lineH
   }
@@ -58,7 +59,20 @@ export function generatePDF(
     y += 12
   }
 
-  // Header block
+  const addFooter = () => {
+    const footerY = doc.internal.pageSize.getHeight() - 36
+    doc.setFontSize(9)
+    doc.setTextColor(150, 150, 150)
+    doc.setFont('helvetica', 'italic')
+    doc.text(
+      'These are planning notes only. Assignments are written and submitted independently in Blackboard Ultra.',
+      margin,
+      footerY,
+      { maxWidth: contentW }
+    )
+  }
+
+  // Header
   addText(config.courseTitle, 11, false, [100, 100, 100])
   y += 2
   addText(config.semester, 11, false, [100, 100, 100])
@@ -69,32 +83,75 @@ export function generatePDF(
   y += 8
   addDivider()
 
-  // Title
+  return { doc, addText, addDivider, addFooter, margin, contentW, pageW, getY: () => y, setY: (v: number) => { y = v } }
+}
+
+export function generatePDF(
+  exportType: ExportType,
+  studentName: string,
+  section: string,
+  sections: Section[]
+): void {
+  const { doc, addText, addDivider, addFooter } = buildDoc(studentName, section)
+
   addText(TITLES[exportType], 20, true, [15, 80, 150])
-  y += 16
   addDivider()
 
-  // Sections
   for (const sec of sections) {
-    if (!sec.content.trim()) continue
-    addText(sec.heading, 12, true)
-    y += 4
-    addText(sec.content, 11)
-    y += 16
+    if (sec.isList && sec.items) {
+      if (sec.items.length === 0) continue
+      addText(sec.heading, 12, true)
+      for (const item of sec.items) {
+        addText(`  • ${item}`, 11)
+      }
+      addDivider()
+    } else {
+      if (!sec.content?.trim()) continue
+      addText(sec.heading, 12, true)
+      addText(sec.content, 11)
+      addDivider()
+    }
   }
 
-  // Footer note
-  y = doc.internal.pageSize.getHeight() - 36
-  doc.setFontSize(9)
-  doc.setTextColor(150, 150, 150)
-  doc.setFont('helvetica', 'italic')
-  doc.text(
-    'These are planning notes only. Assignments are written and submitted independently in Blackboard Ultra.',
-    margin,
-    y,
-    { maxWidth: contentW }
-  )
+  addFooter()
 
   const filename = `${TITLES[exportType].replace(/\s+/g, '_')}_${studentName.replace(/\s+/g, '_')}.pdf`
+  doc.save(filename)
+}
+
+export function generateWeeklyNotesPDF(
+  weekNumber: number,
+  weekTitle: string,
+  chapters: string,
+  objectives: string[],
+  projectConnection: string,
+  studentName: string,
+  section: string
+): void {
+  const { doc, addText, addDivider, addFooter } = buildDoc(studentName, section)
+
+  addText(`Week ${weekNumber}: ${weekTitle}`, 20, true, [15, 80, 150])
+  addText(chapters, 11, false, [100, 100, 100])
+  addDivider()
+
+  // Learning objectives
+  addText('Learning Objectives', 12, true)
+  for (const obj of objectives) {
+    addText(`  • ${obj}`, 11)
+  }
+  addDivider()
+
+  // Project connection
+  addText('Health Advocacy Project Connection', 12, true)
+  if (projectConnection.trim()) {
+    addText(projectConnection, 11)
+  } else {
+    addText('(No connection noted for this week.)', 11, false, [150, 150, 150])
+  }
+  addDivider()
+
+  addFooter()
+
+  const filename = `Week_${weekNumber}_Notes_${studentName.replace(/\s+/g, '_')}.pdf`
   doc.save(filename)
 }
